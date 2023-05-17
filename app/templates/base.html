@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<title>{% block title %}{% endblock %} - Portfolio</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+<body>
+    <header>
+        <div class="logo">TOMAS FERREYRA</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('portafolio.index') }}">Home</a></li>
+                <li><a href="#contacto">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+    <div class="footer">
+        <div class="center full-with">
+            <div class="row">
+                <h3>Contact me</h3>
+            </div>
+        </div>
+        <div class="center full-with">
+            <div class="row">
+                <p>Or you can also follow me on my social networks</p>
+            </div>
+        </div>
+        <div class="center full-with social-links">
+            <div class="row">
+                <a target="_blank" href="https://twitter.com/tomyferreyra_"><img class="social" width="30" src="{{ url_for('static', filename='twitter (1).png') }}"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/tomy-ferreyra-a92b18233/"><img class="social" width="30" src="{{ url_for('static', filename='linkedin.png') }}"></a>
+                <a target="_blank" href="https://github.com/tomasferreyra1"><img class="social" width="30" src="{{ url_for('static', filename='github.png') }}"></a>                
+            </div>
+        </div>
+        <div class="made-with">
+            <div class="row">
+                <p>Made with ❤️ by Tomas Ferreyra</p>
+            </div>
+        </div>
+    </div>
+</body>
+

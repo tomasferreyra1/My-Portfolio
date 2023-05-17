@@ -1,0 +1,21 @@
+<div class="center padded">
+    <div class="content">
+        <div class="row vert-pad">
+            <div class="left padded">
+                <h4>Now or Never</h4>
+                <p>I will do my best to learn and add value</p>
+            </div>
+            <div id="contacto" class="right padded">
+                <div class="contact-form">
+                    <form method="post" action="{{ url_for('portafolio.mail') }}" class="contact-form">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        
+                        <textarea name="message" minlength="10" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn full-with">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
